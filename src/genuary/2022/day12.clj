@@ -1,3 +1,4 @@
+;; Packing (squares, circles, any shape…)
 (ns genuary.2022.day12
   (:require [genuary.common :refer [divide-square]]
             [fastmath.random :as r]

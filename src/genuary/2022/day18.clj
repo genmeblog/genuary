@@ -51,7 +51,7 @@
   (let [p (p/clone-pixels pixels)]
     (p/set-channel! p 1 (p/get-channel p 0))
     (p/set-channel! p 2 (p/get-channel p 0))
-    (let [res (p/to-pixels (c2d/convolve p :unsharp))]
+    (let [res (p/to-pixels (c2d/convolve p [0 0 0 -2 5 -2 0 0 0]))] ;; convolve horizontally only
       (p/set-channel! pixels 0 (p/get-channel res 0)))))
 
 (c2d/with-canvas-> (c2d/canvas w h :highest)

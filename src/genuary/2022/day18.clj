@@ -99,3 +99,4 @@
   (o/render-rgb-scanlines {:scale 1.1})
   #_(c2d/save "results/2022/day18.jpg")
   (utils/show-image))
+

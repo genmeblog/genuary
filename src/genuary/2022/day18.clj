@@ -1,3 +1,6 @@
+;; VHS.
+;; full process: https://github.com/tsulej/GenerateMe/blob/master/composite_video_simulator/composite_video_simulator.pde 
+
 (ns genuary.2022.day18
   (:require [clojure2d.core :as c2d]
             [clojure2d.extra.utils :as utils]

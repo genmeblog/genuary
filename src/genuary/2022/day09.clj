@@ -61,7 +61,7 @@
     (if (or
          (>= (+ x w) 800)
          (>= (+ y h) 800)
-         (overlap? p1 (p/to-pixels (c2d/subimage c x y w h))))
+         (overlap? p1 (p/to-pixels c x y w h)))
       (recur c (inc t))
       (-> c
           (c2d/set-color col)
@@ -75,6 +75,15 @@
   (dotimes [t 1200]
     (maybe-draw c (* 2 t)))
   (c2d/image c (o/noise-overlay 800 800 {:alpha 60}))
-  (c2d/save c "results/2022/day09_d.jpg")
+  #_(c2d/save c "results/2022/day09_d.jpg")
   (utils/show-image c))
 
+
+
+(c2d/with-canvas [c (c2d/canvas 800 800)]
+  (c2d/set-background c :black)
+  (c2d/set-color c :white)
+  (c2d/set-font-attributes c 200)
+  (let [s (c2d/font-shape c "ABC" 400 400)]
+    (c2d/shape c s true))
+  (utils/show-image c))

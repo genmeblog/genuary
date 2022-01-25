@@ -1,3 +1,4 @@
+;; Abstract vegetation.
 (ns genuary.2022.day23
   (:require [fastmath.vector :as v]
             [fastmath.random :as r]
